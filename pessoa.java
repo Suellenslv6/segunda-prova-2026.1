@@ -9,12 +9,12 @@ public class pessoa {
     public static int cadastrarPessoa(Pessoa[] v, int qtd) {
         if (qtd >= v.length) {
             System.out.println("Vetor cheio!");
-        return qtd;
+            return qtd;
     }
     Pessoa p = new Pessoa();
     while (true) {
         System.out.print("Digite o nome: ");
-        p.nome = sc.nextLine();
+        p.nome = jv.nextLine();
         // Se o nome NÃO existir, sai do laço
         if (!buscarNome(v, qtd, p.nome)) {
             break;
@@ -24,11 +24,11 @@ public class pessoa {
     }
 
     System.out.print("Digite a idade: ");
-    p.idade = sc.nextInt();
+    p.idade = jv.nextInt();
     System.out.print("Digite o peso: ");
-    p.peso = sc.nextDouble();
+    p.peso = jv.nextDouble();
     System.out.print("Digite a altura: ");
-    p.altura = sc.nextDouble();
+    p.altura = jv.nextDouble();
     v[qtd] = p;
     return qtd + 1;
 }
