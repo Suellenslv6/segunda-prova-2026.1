@@ -112,7 +112,7 @@ public class Pessoa {
                 maior = i;
         }
     }
-}
 return maior;
 }
+ }
 }
