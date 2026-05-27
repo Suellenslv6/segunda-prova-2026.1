@@ -4,13 +4,11 @@ public class pessoa {
     sting nome;
     int idade;
     double altura, peso;
-
-public static int cadastrarPessoa(Pessoa[] v, int qtd) {
-
-    Scanner sc = new Scanner(System.in);
-
-    if (qtd >= v.length) {
-        System.out.println("Vetor cheio!");
+    }
+        //Questão 1
+    public static int cadastrarPessoa(Pessoa[] v, int qtd) {
+        if (qtd >= v.length) {
+            System.out.println("Vetor cheio!");
         return qtd;
     }
     Pessoa p = new Pessoa();
@@ -34,8 +32,8 @@ public static int cadastrarPessoa(Pessoa[] v, int qtd) {
     v[qtd] = p;
     return qtd + 1;
 }
+    //Questão 2
     public static void imprimirPessoas(Pessoa[] v, int qtd) {
-
         for (int i = 0; i < qtd; i++) {
             System.out.println("Nome: " + v[i].nome);
             System.out.println("Idade: " + v[i].idade);
@@ -45,13 +43,12 @@ public static int cadastrarPessoa(Pessoa[] v, int qtd) {
             System.out.println("IMC: " + imc);
         }
     }
-
     public static double calcularIMC(Pessoa[] v, int i) {
         return v[i].peso / (v[i].altura * v[i].altura);
     }
-}
 
-public static int maisVelhaIMCMagreza(Pessoa[] v, int qtd) {
+    //Questão 3
+    public static int maisVelhaIMCMagreza(Pessoa[] v, int qtd) {
     int indice = -1;
     int maiorIdade = -1;
     for (int i = 0; i < qtd; i++) {
@@ -66,26 +63,26 @@ public static int maisVelhaIMCMagreza(Pessoa[] v, int qtd) {
 
     return indice;
 }
-public static void insertionSortPorNome(Pessoa[] v, int qtd) {
+    //Questão 4
+    public static void insertionSortPorNome(Pessoa[] v, int qtd) {
     for (int i = 1; i < qtd; i++) {
         Pessoa chave = v[i];
         int j = i - 1;
-        while (j >= 0 &&
-               v[j].nome.compareToIgnoreCase(chave.nome) > 0) {
+        while (j >= 0 && v[j].nome.compareToIgnoreCase(chave.nome) > 0);{
             v[j + 1] = v[j];
             j -= 1;
         }
         v[j + 1] = chave;
     }
 }
-public static int buscaSequencialPorIdades(Pessoa[] v, int qtd){
-    int maior = 0;
-    for(int i = 1; i < qtd; i += 1){
-        if(v[i].idade > v[maior].idade){
-            maior = i;
+    //Questão 5
+    public static int buscaSequencialPorIdades(Pessoa[] v, int qtd){
+        int maior = 0;
+        for(int i = 1; i < qtd; i += 1){
+            if(v[i].idade > v[maior].idade){
+                maior = i;
         }
     }
 }
 
-    }
 }
