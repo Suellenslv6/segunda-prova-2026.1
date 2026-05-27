@@ -6,8 +6,21 @@ public class Pessoa {
     int idade;
     double altura, peso;
     public static Scanner jv = new Scanner(System.in);
-    public static void main(String[] args){
-   
+    public static void main(String[] args) {
+
+    Pessoa[] v = new Pessoa[10];
+
+    int qtd = 0;
+
+    qtd = cadastrarPessoa(v, qtd);
+    qtd = cadastrarPessoa(v, qtd);
+
+    imprimirPessoas(v, qtd);
+
+    int maior = buscaSequencialPorIdades(v, qtd);
+
+    System.out.println("Pessoa mais velha: " + v[maior].nome);
+} 
         //Questão 1
     public static int cadastrarPessoa(pessoa[] v, int qtd) {
         if (qtd >= v.length) {
