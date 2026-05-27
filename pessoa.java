@@ -31,7 +31,6 @@ public class Pessoa {
     while (true) {
         System.out.print("Digite o nome: ");
         p.nome = jv.nextLine();
-        // Se o nome NÃO existir, sai do laço
         if (!buscarNome(v, qtd, p.nome)) {
             break;
         }
@@ -45,6 +44,7 @@ public class Pessoa {
     p.peso = jv.nextDouble();
     System.out.print("Digite a altura: ");
     p.altura = jv.nextDouble();
+    jv.nextLine();
     v[qtd] = p;
     return qtd + 1;
 }
@@ -114,5 +114,4 @@ public class Pessoa {
     }
 return maior;
 }
- }
 }
