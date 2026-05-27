@@ -3,7 +3,7 @@ import Java.util.Scanner;
 public class pessoa {
     public static Scanner jv = new Scanner(System.in);
     public static void main(String[] args){
-    sting nome;
+    String nome;
     int idade;
     double altura, peso;
     }
