@@ -22,7 +22,7 @@ public class Pessoa {
     System.out.println("Pessoa mais velha: " + v[maior].nome);
 } 
         //Questão 1
-    public static int cadastrarPessoa(pessoa[] v, int qtd) {
+    public static int cadastrarPessoa(Pessoa[] v, int qtd) {
         if (qtd >= v.length) {
             System.out.println("Vetor cheio!");
             return qtd;
@@ -49,7 +49,7 @@ public class Pessoa {
     return qtd + 1;
 }
  // Busca de nome
-    public static boolean buscarNome(pessoa[] v, int qtd, String nome) {
+    public static boolean buscarNome(Pessoa[] v, int qtd, String nome) {
 
         for (int i = 0; i < qtd; i++) {
 
@@ -62,7 +62,7 @@ public class Pessoa {
     }
 
     //Questão 2
-    public static void imprimirPessoas(pessoa[] v, int qtd) {
+    public static void imprimirPessoas(Pessoa[] v, int qtd) {
         for (int i = 0; i < qtd; i++) {
             System.out.println("Nome: " + v[i].nome);
             System.out.println("Idade: " + v[i].idade);
@@ -77,7 +77,7 @@ public class Pessoa {
     }
 
     //Questão 3
-    public static int maisVelhaIMCMagreza(pessoa[] v, int qtd) {
+    public static int maisVelhaIMCMagreza(Pessoa[] v, int qtd) {
     int indice = -1;
     int maiorIdade = -1;
     for (int i = 0; i < qtd; i++) {
@@ -93,7 +93,7 @@ public class Pessoa {
     return indice;
 }
     //Questão 4
-    public static void insertionSortPorNome(pessoa[] v, int qtd) {
+    public static void insertionSortPorNome(Pessoa[] v, int qtd) {
     for (int i = 1; i < qtd; i++) {
         Pessoa chave = v[i];
         int j = i - 1;
@@ -105,7 +105,7 @@ public class Pessoa {
     }
 }
     //Questão 5
-    public static int buscaSequencialPorIdades(pessoa[] v, int qtd){
+    public static int buscaSequencialPorIdades(Pessoa[] v, int qtd){
         int maior = 0;
         for(int i = 1; i < qtd; i += 1){
             if(v[i].idade > v[maior].idade){
