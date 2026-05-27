@@ -1,12 +1,13 @@
-import Java.util.Scanner;
+import java.util.Scanner;
 
-public class pessoa {
-    public static Scanner jv = new Scanner(System.in);
-    public static void main(String[] args){
+public class Pessoa {
+    
     String nome;
     int idade;
     double altura, peso;
-    }
+    public static Scanner jv = new Scanner(System.in);
+    public static void main(String[] args){
+   
         //Questão 1
     public static int cadastrarPessoa(pessoa[] v, int qtd) {
         if (qtd >= v.length) {
@@ -83,7 +84,7 @@ public class pessoa {
     for (int i = 1; i < qtd; i++) {
         Pessoa chave = v[i];
         int j = i - 1;
-        while (j >= 0 && v[j].nome.compareToIgnoreCase(chave.nome) > 0);{
+        while (j >= 0 && v[j].nome.compareToIgnoreCase(chave.nome) > 0) {
             v[j + 1] = v[j];
             j -= 1;
         }
@@ -99,5 +100,6 @@ public class pessoa {
         }
     }
 }
-
+return maior;
+}
 }
